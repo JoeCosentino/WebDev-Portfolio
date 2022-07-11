@@ -2,15 +2,11 @@ import React from 'react';
 
 function Nav() {
 
-    function aboutSelected() {
-        console.log('hello');
-    }
-
     return (
         <div>
             <ul>
                 <li>
-                    <a href='#about' onClick={aboutSelected}>About</a> 
+                    <a href='#about'>About</a> 
                 </li>
                 <li>
                     <span>Portfolio</span>
