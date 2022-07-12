@@ -11,7 +11,7 @@ function App() {
 
   const [contactSelected, setContactSelected] = useState(false)
   const [resumeSelected, setResumeSelected] = useState(false)
-  const [aboutSelected, setAboutSelected] = useState(false)
+  const [aboutSelected, setAboutSelected] = useState(true)
   const [portfolioSelected, setPortfolioSelected] = useState(false)
 
   return (
@@ -27,7 +27,7 @@ function App() {
         setAboutSelected={setAboutSelected}
       ></Nav>
       <main>
-        <About></About>
+        {aboutSelected && <About></About>}
         {contactSelected && <Contact></Contact>}
         {portfolioSelected && <Portfolio></Portfolio>}
         {resumeSelected && <Resume></Resume>}

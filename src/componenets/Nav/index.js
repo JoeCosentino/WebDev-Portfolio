@@ -21,16 +21,37 @@ function Nav(props) {
             </h2>
             <ul>
                 <li>
-                    <a href='#about' onClick={() => setContactSelected(!aboutSelected)}>About</a> 
+                    <a href='#about' onClick={() => {
+                        setAboutSelected(true)
+                        setContactSelected(false)
+                        setResumeSelected(false)
+                        setPortfolioSelected(false)
+                    }}>About</a> 
                 </li>
                 <li>
-                    <span onClick={() => setContactSelected(!portfolioSelected)}>Portfolio</span>
+                    <span onClick={() => {
+                        setPortfolioSelected(true)
+                        setAboutSelected(false)
+                        setContactSelected(false)
+                        setResumeSelected(false)
+                    }}
+                        >Portfolio</span>
                 </li>
                 <li>
-                    <span onClick={() => setContactSelected(!contactSelected)} >Contact</span>
+                    <span onClick={() => {
+                    setContactSelected(true)
+                    setAboutSelected(false)
+                    setResumeSelected(false)
+                    setPortfolioSelected(false)
+                    }} >Contact</span>
                 </li>
                 <li>
-                    <span onClick={() => setContactSelected(!resumeSelected)}>Resume</span>
+                    <span onClick={() => {
+                        setResumeSelected(true)
+                        setPortfolioSelected(false)
+                        setAboutSelected(false)
+                        setContactSelected(false)
+                    }}>Resume</span>
                 </li>
             </ul>
         </section>
