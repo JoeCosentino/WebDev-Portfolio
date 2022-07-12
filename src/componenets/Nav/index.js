@@ -3,13 +3,13 @@ import React from 'react';
 function Nav(props) {
 
     const {
-        contactSelected,
+        // contactSelected,
         setContactSelected,
-        portfolioSelected,
+        // portfolioSelected,
         setPortfolioSelected,
-        aboutSelected,
+        // aboutSelected,
         setAboutSelected,
-        resumeSelected,
+        // resumeSelected,
         setResumeSelected
     } = props;
 
@@ -21,12 +21,12 @@ function Nav(props) {
             </h2>
             <ul>
                 <li>
-                    <a href='#about' onClick={() => {
+                    <span onClick={() => {
                         setAboutSelected(true)
                         setContactSelected(false)
                         setResumeSelected(false)
                         setPortfolioSelected(false)
-                    }}>About</a> 
+                    }}>About</span> 
                 </li>
                 <li>
                     <span onClick={() => {
