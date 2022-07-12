@@ -5,26 +5,32 @@ import Contact from './componenets/Contact';
 import Footer from './componenets/Footer';
 import Nav from './componenets/Nav';
 import Portfolio from './componenets/Portfolio';
+import Resume from './componenets/Resume';
 
 function App() {
 
   const [contactSelected, setContactSelected] = useState(false)
+  const [resumeSelected, setResumeSelected] = useState(false)
+  const [aboutSelected, setAboutSelected] = useState(false)
+  const [portfolioSelected, setPortfolioSelected] = useState(false)
 
   return (
     <div>
       <Nav
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
+        portfolioSelected={portfolioSelected}
+        setPortfolioSelected={setPortfolioSelected}
+        resumeSelected={resumeSelected}
+        setResumeSelected={setResumeSelected}
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
       ></Nav>
       <main>
-        {!contactSelected ? (
-          <>
-            <About></About>
-            <Portfolio></Portfolio>
-          </>
-        ) : (
-          <Contact></Contact>
-        )}
+        <About></About>
+        {contactSelected && <Contact></Contact>}
+        {portfolioSelected && <Portfolio></Portfolio>}
+        {resumeSelected && <Resume></Resume>}
       </main>
       <Footer></Footer>
     </div>

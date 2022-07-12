@@ -4,7 +4,13 @@ function Nav(props) {
 
     const {
         contactSelected,
-        setContactSelected
+        setContactSelected,
+        portfolioSelected,
+        setPortfolioSelected,
+        aboutSelected,
+        setAboutSelected,
+        resumeSelected,
+        setResumeSelected
     } = props;
 
 
@@ -15,16 +21,16 @@ function Nav(props) {
             </h2>
             <ul>
                 <li>
-                    <a href='#about' onClick={() => setContactSelected(false)}>About</a> 
+                    <a href='#about' onClick={() => setContactSelected(!aboutSelected)}>About</a> 
                 </li>
                 <li>
-                    <span>Portfolio</span>
+                    <span onClick={() => setContactSelected(!portfolioSelected)}>Portfolio</span>
                 </li>
                 <li>
-                    <span onClick={() => setContactSelected(true)}>Contact</span>
+                    <span onClick={() => setContactSelected(!contactSelected)} >Contact</span>
                 </li>
                 <li>
-                    <span>Resume</span>
+                    <span onClick={() => setContactSelected(!resumeSelected)}>Resume</span>
                 </li>
             </ul>
         </section>

@@ -21,8 +21,8 @@ function Portfolio({}) {
         <div>
             {projects.map(project => (
                 <div>
-                <h1>{project.name}</h1>
-                <p>{project.description}</p>
+                    <h1>{project.name}</h1>
+                    <p>{project.description}</p>
                 </div>
             ))}
         </div>
