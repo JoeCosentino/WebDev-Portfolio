@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import About from './componenets/About';
 import Contact from './componenets/Contact';
+import Footer from './componenets/Footer';
 import Nav from './componenets/Nav';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Contact></Contact>
         )}
       </main>
+      <Footer></Footer>
     </div>
   );
 }
