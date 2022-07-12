@@ -4,7 +4,7 @@ import About from './componenets/About';
 import Contact from './componenets/Contact';
 import Footer from './componenets/Footer';
 import Nav from './componenets/Nav';
-import Project from './componenets/Project';
+import Portfolio from './componenets/Portfolio';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
         {!contactSelected ? (
           <>
             <About></About>
-            <Project></Project>
+            <Portfolio></Portfolio>
           </>
         ) : (
           <Contact></Contact>
