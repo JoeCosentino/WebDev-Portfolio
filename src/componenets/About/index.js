@@ -1,11 +1,13 @@
 import React from "react";
+import aboutMePic from '../../assets/selfie.jpg'
+import './about.css'
 
 function About () {
     return (
-        <section>
+        <section className="about-me">
             <h1 id='about'>About Me</h1>
             <img 
-                src="../../assets/selfie.jpg"
+                src={aboutMePic}
                 alt='a look at the developer'
             />
             <p>

@@ -1,16 +1,17 @@
 import React from 'react';
-import './index.css'
+import '../../index.css'
+import './styles.css'
 
 function Nav(props) {
 
     const {
-        // contactSelected,
+        contactSelected,
         setContactSelected,
-        // portfolioSelected,
+        portfolioSelected,
         setPortfolioSelected,
-        // aboutSelected,
+        aboutSelected,
         setAboutSelected,
-        // resumeSelected,
+        resumeSelected,
         setResumeSelected
     } = props;
 
@@ -21,7 +22,7 @@ function Nav(props) {
                 <a href='/'>Giuseppe Cosentino</a>
             </h2>
             <ul>
-                <li>
+                <li className={aboutSelected && 'active'}>
                     <span onClick={() => {
                         setAboutSelected(true)
                         setContactSelected(false)
@@ -29,7 +30,7 @@ function Nav(props) {
                         setPortfolioSelected(false)
                     }}>About</span> 
                 </li>
-                <li>
+                <li className={portfolioSelected && 'active'}>
                     <span onClick={() => {
                         setPortfolioSelected(true)
                         setAboutSelected(false)
@@ -38,7 +39,7 @@ function Nav(props) {
                     }}
                         >Portfolio</span>
                 </li>
-                <li>
+                <li className={contactSelected && 'active'}>
                     <span onClick={() => {
                     setContactSelected(true)
                     setAboutSelected(false)
@@ -46,7 +47,7 @@ function Nav(props) {
                     setPortfolioSelected(false)
                     }} >Contact</span>
                 </li>
-                <li>
+                <li className={resumeSelected && 'active'}>
                     <span onClick={() => {
                         setResumeSelected(true)
                         setPortfolioSelected(false)
