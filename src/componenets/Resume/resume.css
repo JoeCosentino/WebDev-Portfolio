@@ -3,4 +3,15 @@
     height: 100%;
     position: absolute;
     width: 100%;
+    padding: 20px 30px;
+}
+
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li {
+    margin: 0 15px;
 }
